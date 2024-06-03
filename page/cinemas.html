@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cinemas</title>
+      <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <link rel="stylesheet" href="input.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class=" bg-black containe-sm mx-auto text-white ">
+    <header class="bg-zinc-700">
+      <nav
+        class="w-[100%]"
+      >
+      <div class=" bg-zinc-700  mx-auto justify-between py-4 items-center flex w-[85%]">
+        <div class="justify-between items-center flex">
+          <img
+            class="h-[50px] w-[50px] object-cover rotate-[-12deg]"
+            src="../src/img/logo.png"
+            alt="logo"
+          />
+          <a href="#" class="text-yellow-600 text-3xl font-bold cursor-pointer">
+            MOVIES TODAY
+          </a>
+        </div>
+        <ul class="flex items-center justify-between w-[550px] text-white">
+          <li><a href="#" class="hover:text-red-500">MOVIES</a></li>
+          <li><a href="#" class="hover:text-red-500">CINEMAS</a></li>
+          <li><a href="#" class="hover:text-red-500">PROMOTION</a></li>
+          <li><a href="#" class="hover:text-red-500">ABOUT AS</a></li>
+        </ul>
+        <!--TODO search -->
+        <form class="w-[300px] flex gap-5">
+          <label
+            for="default-search"
+            class="mb-2 text-sm font-medium text-gray-900 sr-only"
+            >Search</label
+          >
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+            <i class="fa-solid fa-magnifying-glass text-black"></i>
+            </div>
+            <input
+              type="search"
+              id="default-search"
+              class="block w-full p-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-zinc-400 focus:border-black"
+              placeholder="Search Movies..."
+              required
+            />
+          </div>
+          <!-- login -->
+        <a
+        href="#"
+        class="text-center text-white text-sm bg-rose-800 rounded-[5px] px-5 py-3"
+      >
+        login
+      </a>
+        </form>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- TODO logocinema -->
+      <section>
+        <div class="relative">
+          <img src="../src//img/logocinema.jpeg" alt="logo">
+        </div>
+      </section>
+      <section>
+          <h3>CINEMAS:</h3>
+      </section>
+    </main>
+</body>
+</html>
