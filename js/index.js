@@ -1,5 +1,6 @@
-import { movie } from "../components/CardComponent.js";
-import { movies } from "../data/Movies.js";
-let render = document.querySelector("#reander");
-movies.slice(0,12).map((m) => (render.innerHTML += movie(m)));
-
+import { footter } from "../components/footter.js";
+import { navbars } from "../components/navbar.js";
+let footer = document.querySelector("#footer");
+let navbar = document.querySelector("#reander");
+footer.innerHTML = footter();
+navbar.innerHTML = navbars("../src/index.html" ,"../page/cinemas.html" , "../page/promotion.html" ,"../page/about.html");

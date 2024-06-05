@@ -16,9 +16,9 @@
   <body class=" bg-black containe-sm mx-auto text-white ">
     <header class="bg-zinc-700">
       <nav
-        class="w-[100%]"
+        class="w-[100%] fixed z-50 bg-zinc-700"
       >
-      <div class=" bg-zinc-700  mx-auto justify-between py-4 items-center flex w-[85%]">
+      <div class="mx-auto justify-between py-4 items-center flex w-[85%]">
         <div class="justify-between items-center flex">
           <img
             class="h-[50px] w-[50px] object-cover rotate-[-12deg]"
@@ -30,10 +30,10 @@
           </a>
         </div>
         <ul class="flex items-center justify-between w-[550px] text-white">
-          <li><a href="#" class="hover:text-red-500">MOVIES</a></li>
-          <li><a href="#" class="hover:text-red-500">CINEMAS</a></li>
-          <li><a href="#" class="hover:text-red-500">PROMOTION</a></li>
-          <li><a href="#" class="hover:text-red-500">ABOUT AS</a></li>
+          <li><a href="../src/index.html" class="hover:text-red-500">MOVIES</a></li>
+          <li><a href="../page/cinemas.html" class="hover:text-red-500">CINEMAS</a></li>
+          <li><a href="../page/promotion.html" class="hover:text-red-500">PROMOTION</a></li>
+          <li><a href="../page/about.html" class="hover:text-red-500">ABOUT AS</a></li>
         </ul>
         <!--TODO search -->
         <form class="w-[300px] flex gap-5">
@@ -73,12 +73,12 @@
       <!-- caroual -->
       <div
         id="default-carousel"
-        class="relative w-full overflow-hidden p-12 h-[35rem] bg-[url('./img/pic.jpg')]"
+        class="z-0 relative w-full overflow-hidden mt-12 p-12 h-[35rem] bg-[url('./img/pic.jpg')]"
         data-carousel="slide"
       >
         <!--TODO Carousel wrapper -->
         <div
-          class="relative w-[100%] m-auto overflow-hidden rounded-lg md:h-96"
+          class="relative w-[100%] m-auto overflow-hidden rounded-lg md:h-96 mt-6"
         >
           <!-- Item 1 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -608,17 +608,17 @@
       </div>
     </main>
     <footer>
-        <section class="text-center mt-6 ">
+        <section class="text-center mt-7 ">
           <h5 class="text-2xl font-bold">Follow Our Social Media</h5>
           <!-- TODO icon -->
-          <div class="mt-6 text-[30px] flex justify-center items-center gap-24">
+          <div class="mt-7 text-[30px] flex justify-center items-center gap-24">
             <i class="fa-brands fa-facebook hover:text-red-700"></i>
             <i class="fa-brands fa-twitter hover:text-red-700"></i>
             <i class="fa-brands fa-youtube hover:text-red-700"></i>
             <i class="fa-brands fa-tiktok hover:text-red-700"></i>
           </div>
         </section>
-        <section class="mt-6 bg-yellow-600 w-[100%] py-10">
+        <section class="mt-7 bg-yellow-600 w-[100%] py-10">
            <!-- TODO company -->
             <div class="flex justify-between w-[85%] mx-auto">
               <div class="flex flex-col text-[1rem] gap-2">
