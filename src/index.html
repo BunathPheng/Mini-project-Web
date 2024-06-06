@@ -8,77 +8,165 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="input.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class=" bg-black containe-sm mx-auto text-white ">
+  <body class="bg-black mx-auto text-white">
     <header class="bg-zinc-700">
-      <nav
-        class="w-[100%] fixed z-50 bg-zinc-700"
-      >
-      <div class="mx-auto justify-between py-4 items-center flex w-[85%]">
-        <div class="justify-between items-center flex">
-          <img
-            class="h-[50px] w-[50px] object-cover rotate-[-12deg]"
-            src="./img/logo.png"
-            alt="logo"
-          />
-          <a href="#" class="text-yellow-600 text-3xl font-bold cursor-pointer">
-            MOVIES TODAY
-          </a>
-        </div>
-        <ul class="flex items-center justify-between w-[550px] text-white">
-          <li><a href="../src/index.html" class="hover:text-red-500">MOVIES</a></li>
-          <li><a href="../page/cinemas.html" class="hover:text-red-500">CINEMAS</a></li>
-          <li><a href="../page/promotion.html" class="hover:text-red-500">PROMOTION</a></li>
-          <li><a href="../page/about.html" class="hover:text-red-500">ABOUT AS</a></li>
-        </ul>
-        <!--TODO search -->
-        <form class="w-[300px] flex gap-5">
-          <label
-            for="default-search"
-            class="mb-2 text-sm font-medium text-gray-900 sr-only"
-            >Search</label
+      <nav class="w-[100%] fixed z-50 bg-zinc-700">
+        <div
+          class="mx-auto justify-between lg:py-4 md:py-4 items-center flex lg:w-[85%] md:w-[95%]  min-[320px]:py-1"
+        >
+          <div
+            class="lg:justify-between lg:items-center lg:flex md:flex md:items-center min-[320px]:flex min-[320px]:items-center"
           >
-          <div class="relative">
-            <div
-              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-            >
-            <i class="fa-solid fa-magnifying-glass text-black"></i>
-            </div>
-            <input
-              type="search"
-              id="default-search"
-              class="block w-full p-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-zinc-400 focus:border-black"
-              placeholder="Search Movies..."
-              required
+            <img
+              class="lg:h-[50px] lg:w-[50px] md:h-[50px] md:w-[50px] object-cover rotate-[-12deg] min-[320px]:h-[60px] min-[320px]:w-[70px]"
+              src="./img/logo.png"
+              alt="logo"
             />
+            <a
+              href="#"
+              class="text-yellow-600 lg:text-3xl md:text-sm font-bold cursor-pointer ld:flex md:flex min-[320px]:hidden"
+            >
+              MOVIES TODAY
+            </a>
           </div>
-          <!-- login -->
-        <a
-        href="#"
-        class="text-center text-white text-sm bg-rose-800 rounded-[5px] px-5 py-3"
-      >
-        login
-      </a>
-        </form>
+          <ul
+            class="flex items-center justify-between lg:w-[550px] md:w-[330px] text-white lg:text-[1rem] md:text-sm min-[320px]:hidden lg:flex md:flex"
+          >
+            <li>
+              <a href="../src/index.html" class="hover:text-red-500">MOVIES</a>
+            </li>
+            <li>
+              <a href="../page/cinemas.html" class="hover:text-red-500"
+                >CINEMAS</a
+              >
+            </li>
+            <li>
+              <a href="../page/promotion.html" class="hover:text-red-500"
+                >PROMOTION</a
+              >
+            </li>
+            <li>
+              <a href="../page/about.html" class="hover:text-red-500"
+                >ABOUT AS</a
+              >
+            </li>
+          </ul>
+          <section class="lg:hidden md:hidden min-[320px]:flex">
+            <div
+              id="dropdownDefaultButton"
+              data-dropdown-toggle="dropdown"
+              class="text-white   font-medium  text-sm px-5 py-2 text-center  inline-flex items-center"
+            > 
+            <i class="fa-solid fa-bars text-2xl"></i>
+            </div>
+           
+            <!-- Dropdown menu -->
+            <div
+              id="dropdown"
+              class="z-10 hidden bg-zinc-500 divide-y divide-gray-100  shadow w-full"
+            >
+              <ul
+                class="py-2 text-sm text-white "
+                aria-labelledby="dropdownDefaultButton"
+              >
+                <li>
+                  <a
+                    href="../src/index.html"
+                    class="block px-4 py-2 hover:bg-zinc-400"
+                    >MOVIES</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../page/cinemas.html"
+                    class="block px-4 py-2 hover:bg-zinc-400"
+                    >CINEMAS</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../page/promotion.html"
+                    class="block px-4 py-2 hover:bg-zinc-400"
+                    >PROMOTION</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../page/about.html"
+                    class="block px-4 py-2 hover:bg-zinc-400"
+                    >ABOUT US</a
+                  >
+                </li>
+                <li>
+                  <div class="relative">
+                    <div
+                      class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                    >
+                      <i class="fa-solid fa-magnifying-glass text-black"></i>
+                    </div>
+                    <input
+                      type="search"
+                      id="default-search"
+                      class="block w-full p-3 ps-10 text-sm text-black border border-gray-300 rounded-lg bg-zinc-500 focus:ring-zinc-400 focus:border-gray-100"
+                      placeholder="Search Movies..."
+                      required
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!--TODO search -->
+          <form
+            class="lg:w-[300px] md:w-[200px] lg:flex lg:gap-5 md:gap-2 min-[320px]:hidden md:flex"
+          >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <i class="fa-solid fa-magnifying-glass text-black"></i>
+              </div>
+              <input
+                type="search"
+                id="default-search"
+                class="block w-full lg:py-3 md:py-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-zinc-400 focus:border-black"
+                placeholder="Search Movies..."
+                required
+              />
+            </div>
+            <!-- login -->
+            <a
+              href="#"
+              class="lg:text-center text-white text-sm bg-rose-800 rounded-[5px] lg:px-5 lg:py-3 md:px-1 md:py-1 md:place-content-center"
+            >
+              login
+            </a>
+          </form>
         </div>
       </nav>
     </header>
-    <main
-      class="w-[100%] flex-col justify-between items-center flex  "
-    >
+    <main class="w-[100%] flex-col items-center flex  ">
       <!-- caroual -->
       <div
         id="default-carousel"
-        class="z-0 relative w-full overflow-hidden mt-12 p-12 h-[35rem] bg-[url('./img/pic.jpg')]"
+        class="z-0 relative w-[100%] overflow-hidden mt-12 lg:p-12 md:p-12 lg:h-[35rem] md:h-[35rem] min-[320px]:h-[18rem] min-[320px]:p-10  bg-[url('./img/pic.jpg')]"
         data-carousel="slide"
       >
         <!--TODO Carousel wrapper -->
         <div
-          class="relative w-[100%] m-auto overflow-hidden rounded-lg md:h-96 mt-6"
+          class="relative w-[100%] m-auto overflow-hidden rounded-lg lg:h-96 md:h-96 mt-6
+          min-[320px]:h-[10rem] min-[320px]:py-3"
         >
           <!-- Item 1 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -219,450 +307,461 @@
       <div class="flex items-center justify-between gap-10 mt-5">
         <button
           type="button"
-          class="text-white bg-gradient-to-br hover:bg-gradient-to-bl focus:ring-1 focus:outline-none focus:ring-yellow-500 font-medium rounded-lg text-xl px-5 py-2.5 text-center me-2 mb-2"
+          class="text-white bg-gradient-to-br hover:bg-gradient-to-bl focus:ring-1 focus:outline-none focus:ring-yellow-500 font-medium md:text-[1rem] rounded-lg lg:text-xl px-5 py-2.5 text-center me-2 mb-2"
         >
           NOW SHOWING
         </button>
         <button
           type="button"
-          class="text-white bg-gradient-to-br from-black hover:bg-gradient-to-bl focus:ring-1 focus:outline-none focus:ring-yellow-500 font-medium rounded-lg text-xl px-5 py-2.5 text-center me-2 mb-2"
+          class="text-white bg-gradient-to-br from-black hover:bg-gradient-to-bl focus:ring-1 focus:outline-none focus:ring-yellow-500 font-medium rounded-lg lg:text-xl md:text-[1rem] px-5 py-2.5 text-center me-2 mb-2"
         >
           COMMING SOON
         </button>
       </div>
       <!-- TODO card -->
       <div class="w-[100%] border-zinc-100 border-b-2 pb-6">
-      <div class=" mx-auto grid grid-cols-5 w-[85%] md:w-[85%] gap-5 mt-3 ">
-        <!-- TODO card1 -->
         <div
-        class="rounded-lg shadow" 
-       >
-        <a href="#">
-          <img src ="./img/card1.png"
-            class="h-[300px] w-full object-cover rounded-t-lg"
-            alt="product image"
-          >
-        </a>
-        <div class="mt-2 flex flex-col gap-2">
-          <a href="#">
-            <h4 class="text-white text-2xl font-bold line-clamp-1">Atlas</h4>
-          </a>
-          <div class="flex items-center">
-            <div class="flex items-center space-x-1 rtl:space-x-reverse">
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-white"></i>
-              <i class="fa-solid fa-star text-white"></i>
-              <i class="fa-solid fa-star text-white"></i>
-            </div>
-            <span
-              class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded   ms-3"
-              >5.0</span
-            >
-          </div>
-          <div class="flex items-center justify-between">
+          class="mx-auto grid lg:grid-cols-5 md:grid-cols-3 min-[320px]:grid-cols-1  gap-5 mt-3 w-[85%]
+          justify-center min-[320px]:gap-y-23"
+        >
+          <!-- TODO card1 -->
+          <div class="rounded-lg shadow">
+            <a href="../page/card1.html">
+              <img
+                src="./img/card1.png"
+                class="h-[300px] w-full object-cover rounded-t-lg"
+                alt="product image"
+              />
+            </a>
+            <div class="mt-2 flex flex-col gap-2">
+              <a href="#">
+                <h4 class="text-white text-2xl font-bold line-clamp-1">
+                  Atlas
+                </h4>
+              </a>
+              <div class="flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                </div>
+                <span
+                  class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded ms-3"
+                  >5.0</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
                 <h5
-                class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
-              >
-              04 Jun 2024
-              </h5>
-              <span class="text-white">English</span>
-          </div>
-        </div>
-        </div>
-        <!-- TODO card2 -->
-        <div
-        class="rounded-lg shadow" 
-       >
-        <a href="#">
-          <img src ="./img/card2.png"
-            class="h-[300px] w-full object-cover rounded-t-lg"
-            alt="product image"
-          >
-        </a>
-        <div class="mt-2 flex flex-col gap-2">
-          <a href="#">
-            <h4 class="text-white text-2xl font-bold line-clamp-1">Prey for the Devil</h4>
-          </a>
-          <div class="flex items-center">
-            <div class="flex items-center space-x-1 rtl:space-x-reverse">
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-white"></i>
+                  class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
+                >
+                  04 Jun 2024
+                </h5>
+                <span class="text-white">English</span>
+              </div>
             </div>
-            <span
-              class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded   ms-3"
-              >8.0</span
-            >
           </div>
-          <div class="flex items-center justify-between">
+          <!-- TODO card2 -->
+          <div class="rounded-lg shadow">
+            <a href="../page/card2.html">
+              <img
+                src="./img/card2.png"
+                class="h-[300px] w-full object-cover rounded-t-lg"
+                alt="product image"
+              />
+            </a>
+            <div class="mt-2 flex flex-col gap-2">
+              <a href="#">
+                <h4 class="text-white text-2xl font-bold line-clamp-1">
+                  Prey for the Devil
+                </h4>
+              </a>
+              <div class="flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                </div>
+                <span
+                  class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded ms-3"
+                  >8.0</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
                 <h5
-                class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
-              >
-              04 Jun 2024
-              </h5>
-              <span class="text-white">English</span>
-          </div>
-        </div>
-        </div>
-        <!-- TODO card3 -->
-        <div
-        class="rounded-lg shadow" 
-       >
-        <a href="#">
-          <img src ="./img/card3.png"
-            class="h-[300px] w-full object-cover rounded-t-lg"
-            alt="product image"
-          >
-        </a>
-        <div class="mt-2 flex flex-col gap-2">
-          <a href="#">
-            <h4 class="text-white text-2xl font-bold line-clamp-1">Art of Love</h4>
-          </a>
-          <div class="flex items-center">
-            <div class="flex items-center space-x-1 rtl:space-x-reverse">
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-white"></i>
+                  class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
+                >
+                  04 Jun 2024
+                </h5>
+                <span class="text-white">English</span>
+              </div>
             </div>
-            <span
-              class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded   ms-3"
-              >7.0</span
-            >
           </div>
-          <div class="flex items-center justify-between">
+          <!-- TODO card3 -->
+          <div class="rounded-lg shadow">
+            <a href="../page/card3.html">
+              <img
+                src="./img/card3.png"
+                class="h-[300px] w-full object-cover rounded-t-lg"
+                alt="product image"
+              />
+            </a>
+            <div class="mt-2 flex flex-col gap-2">
+              <a href="#">
+                <h4 class="text-white text-2xl font-bold line-clamp-1">
+                  Art of Love
+                </h4>
+              </a>
+              <div class="flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                </div>
+                <span
+                  class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded ms-3"
+                  >7.0</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
                 <h5
-                class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
-              >
-              04 Jun 2024
-              </h5>
-              <span class="text-white">English</span>
-          </div>
-        </div>
-        </div>
-        <!-- TODO card4 -->
-        <div
-        class="rounded-lg shadow" 
-       >
-        <a href="#">
-          <img src ="./img/card4.png"
-            class="h-[300px] w-full object-cover rounded-t-lg"
-            alt="product image"
-          >
-        </a>
-        <div class="mt-2 flex flex-col gap-2">
-          <a href="#">
-            <h4 class="text-white text-2xl font-bold line-clamp-1">The Wages of Fear</h4>
-          </a>
-          <div class="flex items-center">
-            <div class="flex items-center space-x-1 rtl:space-x-reverse">
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-white"></i>
-              <i class="fa-solid fa-star text-white"></i>
-              <i class="fa-solid fa-star text-white"></i>
+                  class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
+                >
+                  04 Jun 2024
+                </h5>
+                <span class="text-white">English</span>
+              </div>
             </div>
-            <span
-              class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded   ms-3"
-              >5.0</span
-            >
           </div>
-          <div class="flex items-center justify-between">
+          <!-- TODO card4 -->
+          <div class="rounded-lg shadow">
+            <a href="../page/card4.html">
+              <img
+                src="./img/card4.png"
+                class="h-[300px] w-full object-cover rounded-t-lg"
+                alt="product image"
+              />
+            </a>
+            <div class="mt-2 flex flex-col gap-2">
+              <a href="#">
+                <h4 class="text-white text-2xl font-bold line-clamp-1">
+                  The Wages of Fear
+                </h4>
+              </a>
+              <div class="flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                </div>
+                <span
+                  class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded ms-3"
+                  >5.0</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
                 <h5
-                class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
-              >
-              04 Jun 2024
-              </h5>
-              <span class="text-white">English</span>
+                  class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
+                >
+                  04 Jun 2024
+                </h5>
+                <span class="text-white">English</span>
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
           <!-- TODO card5 -->
-        <div
-        class="rounded-lg shadow" 
-       >
-        <a href="#">
-          <img src ="./img/card5.png"
-            class="h-[300px] w-full object-cover rounded-t-lg"
-            alt="product image"
-          >
-        </a>
-        <div class="mt-2 flex flex-col gap-2">
-          <a href="#">
-            <h4 class="text-white text-2xl font-bold line-clamp-1">Heart of the Hunter</h4>
-          </a>
-          <div class="flex items-center">
-            <div class="flex items-center space-x-1 rtl:space-x-reverse">
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-white"></i>
-            </div>
-            <span
-              class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded   ms-3"
-              >5.0</span
-            >
-          </div>
-          <div class="flex items-center justify-between">
+          <div class="rounded-lg shadow">
+            <a href="../page/card5.html">
+              <img
+                src="./img/card5.png"
+                class="h-[300px] w-full object-cover rounded-t-lg"
+                alt="product image"
+              />
+            </a>
+            <div class="mt-2 flex flex-col gap-2">
+              <a href="#">
+                <h4 class="text-white text-2xl font-bold line-clamp-1">
+                  Heart of the Hunter
+                </h4>
+              </a>
+              <div class="flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                </div>
+                <span
+                  class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded ms-3"
+                  >5.0</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
                 <h5
-                class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
-              >
-              04 Jun 2024
-              </h5>
-              <span class="text-white">English</span>
+                  class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
+                >
+                  04 Jun 2024
+                </h5>
+                <span class="text-white">English</span>
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
           <!-- TODO card6 -->
-        <div
-        class="rounded-lg shadow" 
-       >
-        <a href="#">
-          <img src ="./img/card6.png"
-            class="h-[300px] w-full object-cover rounded-t-lg"
-            alt="product image"
-          >
-        </a>
-        <div class="mt-2 flex flex-col gap-2">
-          <a href="#">
-            <h4 class="text-white text-2xl font-bold line-clamp-1">Sixty Minutes</h4>
-          </a>
-          <div class="flex items-center">
-            <div class="flex items-center space-x-1 rtl:space-x-reverse">
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-white"></i>
-              <i class="fa-solid fa-star text-white"></i>
-              <i class="fa-solid fa-star text-white"></i>
-            </div>
-            <span
-              class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded   ms-3"
-              >5.0</span
-            >
-          </div>
-          <div class="flex items-center justify-between">
+          <div class="rounded-lg shadow">
+            <a href="../page/card6.html">
+              <img
+                src="./img/card6.png"
+                class="h-[300px] w-full object-cover rounded-t-lg"
+                alt="product image"
+              />
+            </a>
+            <div class="mt-2 flex flex-col gap-2">
+              <a href="#">
+                <h4 class="text-white text-2xl font-bold line-clamp-1">
+                  Sixty Minutes
+                </h4>
+              </a>
+              <div class="flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                </div>
+                <span
+                  class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded ms-3"
+                  >5.0</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
                 <h5
-                class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
-              >
-              04 Jun 2024
-              </h5>
-              <span class="text-white">English</span>
+                  class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
+                >
+                  04 Jun 2024
+                </h5>
+                <span class="text-white">English</span>
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
           <!-- TODO card7 -->
-        <div
-        class="rounded-lg shadow" 
-       >
-        <a href="#">
-          <img src ="./img/card7.png"
-            class="h-[300px] w-full object-cover rounded-t-lg"
-            alt="product image"
-          >
-        </a>
-        <div class="mt-2 flex flex-col gap-2">
-          <a href="#">
-            <h4 class="text-white text-2xl font-bold line-clamp-1">Fighter</h4>
-          </a>
-          <div class="flex items-center">
-            <div class="flex items-center space-x-1 rtl:space-x-reverse">
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-white"></i>
-            </div>
-            <span
-              class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded   ms-3"
-              >5.0</span
-            >
-          </div>
-          <div class="flex items-center justify-between">
+          <div class="rounded-lg shadow">
+            <a href="../page/card7.html">
+              <img
+                src="./img/card7.png"
+                class="h-[300px] w-full object-cover rounded-t-lg"
+                alt="product image"
+              />
+            </a>
+            <div class="mt-2 flex flex-col gap-2">
+              <a href="#">
+                <h4 class="text-white text-2xl font-bold line-clamp-1">
+                  Fighter
+                </h4>
+              </a>
+              <div class="flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                </div>
+                <span
+                  class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded ms-3"
+                  >5.0</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
                 <h5
-                class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
-              >
-              04 Jun 2024
-              </h5>
-              <span class="text-white">English</span>
+                  class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
+                >
+                  04 Jun 2024
+                </h5>
+                <span class="text-white">English</span>
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
           <!-- TODO card8 -->
-        <div
-        class="rounded-lg shadow" 
-       >
-        <a href="#">
-          <img src ="./img/card8.png"
-            class="h-[300px] w-full object-cover rounded-t-lg"
-            alt="product image"
-          >
-        </a>
-        <div class="mt-2 flex flex-col gap-2">
-          <a href="#">
-            <h4 class="text-white text-2xl font-bold line-clamp-1">The Beautiful Game</h4>
-          </a>
-          <div class="flex items-center">
-            <div class="flex items-center space-x-1 rtl:space-x-reverse">
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-white"></i>
-            </div>
-            <span
-              class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded   ms-3"
-              >5.0</span
-            >
-          </div>
-          <div class="flex items-center justify-between">
+          <div class="rounded-lg shadow">
+            <a href="../page/card8.html">
+              <img
+                src="./img/card8.png"
+                class="h-[300px] w-full object-cover rounded-t-lg"
+                alt="product image"
+              />
+            </a>
+            <div class="mt-2 flex flex-col gap-2">
+              <a href="#">
+                <h4 class="text-white text-2xl font-bold line-clamp-1">
+                  The Beautiful Game
+                </h4>
+              </a>
+              <div class="flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                </div>
+                <span
+                  class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded ms-3"
+                  >5.0</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
                 <h5
-                class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
-              >
-              04 Jun 2024
-              </h5>
-              <span class="text-white">English</span>
+                  class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
+                >
+                  04 Jun 2024
+                </h5>
+                <span class="text-white">English</span>
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
           <!-- TODO card9 -->
-        <div
-        class="rounded-lg shadow" 
-       >
-        <a href="#">
-          <img src ="./img/card9.png"
-            class="h-[300px] w-full object-cover rounded-t-lg"
-            alt="product image"
-          >
-        </a>
-        <div class="mt-2 flex flex-col gap-2">
-          <a href="#">
-            <h4 class="text-white text-2xl font-bold line-clamp-1">Walking in the Movies</h4>
-          </a>
-          <div class="flex items-center">
-            <div class="flex items-center space-x-1 rtl:space-x-reverse">
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-white"></i>
-            </div>
-            <span
-              class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded   ms-3"
-              >5.0</span
-            >
-          </div>
-          <div class="flex items-center justify-between">
+          <div class="rounded-lg shadow">
+            <a href="../page/card9.html">
+              <img
+                src="./img/card9.png"
+                class="h-[300px] w-full object-cover rounded-t-lg"
+                alt="product image"
+              />
+            </a>
+            <div class="mt-2 flex flex-col gap-2">
+              <a href="#">
+                <h4 class="text-white text-2xl font-bold line-clamp-1">
+                  Walking in the Movies
+                </h4>
+              </a>
+              <div class="flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                </div>
+                <span
+                  class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded ms-3"
+                  >5.0</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
                 <h5
-                class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
-              >
-              04 Jun 2024
-              </h5>
-              <span class="text-white">English</span>
+                  class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
+                >
+                  04 Jun 2024
+                </h5>
+                <span class="text-white">English</span>
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
           <!-- TODO card10 -->
-        <div
-        class="rounded-lg shadow" 
-       >
-        <a href="#">
-          <img src ="./img/card10.png"
-            class="h-[300px] w-full object-cover rounded-t-lg"
-            alt="product image"
-          >
-        </a>
-        <div class="mt-2 flex flex-col gap-2">
-          <a href="#">
-            <h4 class="text-white text-2xl font-bold line-clamp-1">Mayor of Kingstown</h4>
-          </a>
-          <div class="flex items-center">
-            <div class="flex items-center space-x-1 rtl:space-x-reverse">
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-white"></i>
-            </div>
-            <span
-              class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded   ms-3"
-              >5.0</span
-            >
-          </div>
-          <div class="flex items-center justify-between">
+          <div class="rounded-lg shadow">
+            <a href="../page/card10.html">
+              <img
+                src="./img/card10.png"
+                class="h-[300px] w-full object-cover rounded-t-lg"
+                alt="product image"
+              />
+            </a>
+            <div class="mt-2 flex flex-col gap-2">
+              <a href="#">
+                <h4 class="text-white text-2xl font-bold line-clamp-1">
+                  Mayor of Kingstown
+                </h4>
+              </a>
+              <div class="flex items-center">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse">
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-yellow-400"></i>
+                  <i class="fa-solid fa-star text-white"></i>
+                </div>
+                <span
+                  class="bg-[#FFA800] text-white text-xs font-semibold px-2.5 py-0.5 rounded ms-3"
+                  >5.0</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
                 <h5
-                class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
-              >
-              04 Jun 2024
-              </h5>
-              <span class="text-white">English</span>
+                  class="text-sm font-semibold text-primarycolor tracking-tight text-yellow-500"
+                >
+                  04 Jun 2024
+                </h5>
+                <span class="text-white">English</span>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
-         
-      </div>
       </div>
     </main>
-    <footer>
-        <section class="text-center mt-7 ">
-          <h5 class="text-2xl font-bold">Follow Our Social Media</h5>
-          <!-- TODO icon -->
-          <div class="mt-7 text-[30px] flex justify-center items-center gap-24">
-            <i class="fa-brands fa-facebook hover:text-red-700"></i>
-            <i class="fa-brands fa-twitter hover:text-red-700"></i>
-            <i class="fa-brands fa-youtube hover:text-red-700"></i>
-            <i class="fa-brands fa-tiktok hover:text-red-700"></i>
+    <footer class="flex flex-col">
+      <section class="text-center mt-7 w-full">
+        <h5 class="text-2xl font-bold">Follow Our Social Media</h5>
+        <!-- TODO icon -->
+        <div class="mt-7 text-[30px] flex justify-center items-center gap-24">
+          <i class="fa-brands fa-facebook hover:text-red-700"></i>
+          <i class="fa-brands fa-twitter hover:text-red-700"></i>
+          <i class="fa-brands fa-youtube hover:text-red-700"></i>
+          <i class="fa-brands fa-tiktok hover:text-red-700"></i>
+        </div>
+      </section>
+      <section class="mt-7 bg-yellow-600 w-full py-10">
+        <!-- TODO company -->
+        <div class="flex justify-between w-[85%] mx-auto flex-wrap gap-6">
+          <div class="flex flex-col text-[1rem] gap-2">
+            <h2 class="text-2xl font-semibold">Company</h2>
+            <a href="#" class="hover:text-zinc-800">About us</a>
+            <a href="#" class="hover:text-zinc-800">Contact us</a>
+            <a href="#" class="hover:text-zinc-800">Cinemas</a>
           </div>
-        </section>
-        <section class="mt-7 bg-yellow-600 w-[100%] py-10">
-           <!-- TODO company -->
-            <div class="flex justify-between w-[85%] mx-auto">
-              <div class="flex flex-col text-[1rem] gap-2">
-                  <h2 class="text-2xl font-semibold">Company</h2>
-                  <a href="#" class="hover:text-zinc-800">About us</a>
-                  <a href="#" class="hover:text-zinc-800">Contact us</a>
-                  <a href="#" class="hover:text-zinc-800">Cinemas</a>
-              </div>
-              <div class="flex flex-col text-[1rem] gap-2">
-                <h2 class="text-2xl font-semibold">More</h2>
-                <a href="#" class="hover:text-zinc-800">Promotions</a>
-                <a href="#" class="hover:text-zinc-800">My Ticket</a>
-                <a href="#" class="hover:text-zinc-800">News & Activity</a>
-                <a href="#" class="hover:text-zinc-800">Terms & Conditions</a>
-              </div>
-              <div class="flex flex-col text-[1rem] gap-2">
-                <h2 class="text-2xl font-semibold">Download Our App</h2>
-                <div class="flex gap-7 items-center">
-                <a href="#" class="hover:text-zinc-800 text-[30px]">
-                      <i class="fa-brands fa-apple"></i>
-                </a>
-                <a href="#" class="hover:text-zinc-800 text-[25px]">
-                  <i class="fa-brands fa-google-play"></i>
-                </a>
-                </div>
-              </div>
+          <div class="flex flex-col text-[1rem] gap-2">
+            <h2 class="text-2xl font-semibold">More</h2>
+            <a href="#" class="hover:text-zinc-800">Promotions</a>
+            <a href="#" class="hover:text-zinc-800">My Ticket</a>
+            <a href="#" class="hover:text-zinc-800">News & Activity</a>
+            <a href="#" class="hover:text-zinc-800">Terms & Conditions</a>
+          </div>
+          <div class="flex flex-col text-[1rem] gap-2">
+            <h2 class="text-2xl font-semibold">Download Our App</h2>
+            <div class="flex gap-7 items-center">
+              <a href="#" class="hover:text-zinc-800 text-[30px]">
+                <i class="fa-brands fa-apple"></i>
+              </a>
+              <a href="#" class="hover:text-zinc-800 text-[25px]">
+                <i class="fa-brands fa-google-play"></i>
+              </a>
             </div>
-            <div class="w-[85%] mx-auto mt-10">
-              <h2 class="text-2xl font-semibold">Payment</h2>
-              <div class="flex mt-7 gap-x-4">
-                <div class="h-[100px] w-[100px] object-cover">
-                  <img src="./img/aba.webp" alt="payment">
-                </div>
-                <div class="h-[100px] w-[100px] object-cover">
-                  <img src="./img/visa.png" alt="payment">
-                </div>
-                <div class="h-[50px] w-[100px] justify-start -mt-4 object-cover">
-                  <img src="./img/payment.png" alt="payment">
-                </div>
-                
-              </div>
-              <p class="text-center mt-5">All right reserved ® 2024</p>
+          </div>
+        </div>
+        <div class="w-[85%] mx-auto mt-10">
+          <h2 class="text-2xl font-semibold">Payment</h2>
+          <div class="flex mt-7 gap-x-4">
+            <div class="h-[100px] w-[100px] object-cover">
+              <img src="./img/aba.webp" alt="payment" />
             </div>
-        </section>
+            <div class="h-[100px] w-[100px] object-cover">
+              <img src="./img/visa.png" alt="payment" />
+            </div>
+            <div class="h-[50px] w-[100px] justify-start -mt-4 object-cover">
+              <img src="./img/payment.png" alt="payment" />
+            </div>
+          </div>
+          <p class="text-center mt-5">All right reserved ® 2024</p>
+        </div>
+      </section>
     </footer>
     <script type="module" src="../js/index.js"></script>
   </body>

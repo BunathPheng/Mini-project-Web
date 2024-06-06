@@ -23,34 +23,114 @@
     <header class="bg-zinc-700">
       <nav class="w-[100%] fixed z-50 bg-zinc-700">
         <div
-          class="mx-auto justify-between py-4 items-center flex w-[85%]"
+          class="mx-auto justify-between lg:py-4 md:py-4 items-center flex lg:w-[85%] md:w-[95%]  min-[320px]:py-1"
         >
-          <div class="justify-between items-center flex">
+          <div
+            class="lg:justify-between lg:items-center lg:flex md:flex md:items-center min-[320px]:flex min-[320px]:items-center"
+          >
             <img
-              class="h-[50px] w-[50px] object-cover rotate-[-12deg]"
+              class="lg:h-[50px] lg:w-[50px] md:h-[50px] md:w-[50px] object-cover rotate-[-12deg] min-[320px]:h-[60px] min-[320px]:w-[70px]"
               src="../src/img/logo.png"
               alt="logo"
             />
             <a
-              href="../src/index.html"
-              class="text-yellow-600 text-3xl font-bold cursor-pointer"
+              href="#"
+              class="text-yellow-600 lg:text-3xl md:text-sm font-bold cursor-pointer ld:flex md:flex min-[320px]:hidden"
             >
               MOVIES TODAY
             </a>
           </div>
-          <ul class="flex items-center justify-between w-[550px] text-white">
-            <li><a href="../src/index.html" class="hover:text-red-500">MOVIES</a></li>
-            <li><a href="../page/cinemas.html" class="hover:text-red-500">CINEMAS</a></li>
-            <li><a href="../page/promotion.html" class="hover:text-red-500">PROMOTION</a></li>
-            <li><a href="../page/about.html" class="hover:text-red-500">ABOUT AS</a></li>
+          <ul
+            class="flex items-center justify-between lg:w-[550px] md:w-[330px] text-white lg:text-[1rem] md:text-sm min-[320px]:hidden lg:flex md:flex"
+          >
+            <li>
+              <a href="../src/index.html" class="hover:text-red-500">MOVIES</a>
+            </li>
+            <li>
+              <a href="../page/cinemas.html" class="hover:text-red-500"
+                >CINEMAS</a
+              >
+            </li>
+            <li>
+              <a href="../page/promotion.html" class="hover:text-red-500"
+                >PROMOTION</a
+              >
+            </li>
+            <li>
+              <a href="../page/about.html" class="hover:text-red-500"
+                >ABOUT AS</a
+              >
+            </li>
           </ul>
-          <!--TODO search -->
-          <form class="w-[300px] flex gap-5">
-            <label
-              for="default-search"
-              class="mb-2 text-sm font-medium text-gray-900 sr-only"
-              >Search</label
+          <section class="lg:hidden md:hidden min-[320px]:flex">
+            <div
+              id="dropdownDefaultButton"
+              data-dropdown-toggle="dropdown"
+              class="text-white   font-medium  text-sm px-5 py-2 text-center  inline-flex items-center"
+            > 
+            <i class="fa-solid fa-bars text-2xl"></i>
+            </div>
+           
+            <!-- Dropdown menu -->
+            <div
+              id="dropdown"
+              class="z-10 hidden bg-zinc-500 divide-y divide-gray-100  shadow w-full"
             >
+              <ul
+                class="py-2 text-sm text-white "
+                aria-labelledby="dropdownDefaultButton"
+              >
+                <li>
+                  <a
+                    href="../src/index.html"
+                    class="block px-4 py-2 hover:bg-zinc-400"
+                    >MOVIES</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../page/cinemas.html"
+                    class="block px-4 py-2 hover:bg-zinc-400"
+                    >CINEMAS</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../page/promotion.html"
+                    class="block px-4 py-2 hover:bg-zinc-400"
+                    >PROMOTION</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../page/about.html"
+                    class="block px-4 py-2 hover:bg-zinc-400"
+                    >ABOUT US</a
+                  >
+                </li>
+                <li>
+                  <div class="relative">
+                    <div
+                      class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                    >
+                      <i class="fa-solid fa-magnifying-glass text-black"></i>
+                    </div>
+                    <input
+                      type="search"
+                      id="default-search"
+                      class="block w-full p-3 ps-10 text-sm text-black border border-gray-300 rounded-lg bg-zinc-500 focus:ring-zinc-400 focus:border-gray-100"
+                      placeholder="Search Movies..."
+                      required
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!--TODO search -->
+          <form
+            class="lg:w-[300px] md:w-[200px] lg:flex lg:gap-5 md:gap-2 min-[320px]:hidden md:flex"
+          >
             <div class="relative">
               <div
                 class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
@@ -60,7 +140,7 @@
               <input
                 type="search"
                 id="default-search"
-                class="block w-full p-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-zinc-400 focus:border-black"
+                class="block w-full lg:py-3 md:py-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-zinc-400 focus:border-black"
                 placeholder="Search Movies..."
                 required
               />
@@ -68,7 +148,7 @@
             <!-- login -->
             <a
               href="#"
-              class="text-center text-white text-sm bg-rose-800 rounded-[5px] px-5 py-3"
+              class="lg:text-center text-white text-sm bg-rose-800 rounded-[5px] lg:px-5 lg:py-3 md:px-1 md:py-1 md:place-content-center"
             >
               login
             </a>
@@ -78,235 +158,238 @@
     </header>
     <main class="">
       <!-- TODO logocinema -->
-        <section>
-          <div class="relative">
-            <img src="../src//img/logocinema.jpeg" alt="logo" />
-          </div>
-        </section>
-        <section>
-          <div class="w-[85%] mx-auto mt-6">
-            <!--TODO search -->
-            <form class="mt-9">
-              <label
-                for="default-search"
-                class="mb-2 text-sm font-medium text-gray-900 sr-only"
-                >Search</label
+      <section>
+        <div class="relative">
+          <img src="../src//img/logocinema.jpeg" alt="logo" />
+        </div>
+      </section>
+      <section>
+        <div class="w-[85%] mx-auto mt-6">
+          <!--TODO search -->
+          <form class="mt-9">
+            <label
+              for="default-search"
+              class="mb-2 text-sm font-medium text-gray-900 sr-only"
+              >Search</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
               >
-              <div class="relative">
-                <div
-                  class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-                >
-                  <i class="fa-solid fa-magnifying-glass text-white"></i>
-                </div>
-                <input
-                  type="search"
-                  id="default-search"
-                  class="block w-full p-3 ps-10 text-sm text-white border border-gray-300 rounded-lg bg-black focus:ring-zinc-400 focus:border-black"
-                  placeholder="Search location..."
-                  required
-                />
+                <i class="fa-solid fa-magnifying-glass text-white"></i>
               </div>
-            </form>
-          </div>
-        </section>
-        <section>
-          <div class="w-[100%] border-zinc-100 border-b-2 pb-7 mt-6">
-            <div class=" mx-auto grid grid-cols-3 w-[85%] gap-3 mt-3 h-[1000px]">
-              <!-- TODO location1 -->
-              <div class="hover:border hover:rounded-lg">
-                <div class="flex flex-col gap-3 p-3 cursor-pointer">
+              <input
+                type="search"
+                id="default-search"
+                class="block w-full p-3 ps-10 text-sm text-white border border-gray-300 rounded-lg bg-black focus:ring-zinc-400 focus:border-black"
+                placeholder="Search location..."
+                required
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="w-[100%] border-zinc-100 border-b-2 pb-7 mt-6">
+          <div class="mx-auto grid lg:grid-cols-3 md:grid-cols-3  min-[320px]:grid-cols-1 w-[85%] gap-3 mt-3 h-[1000px] min-[320px]:h-[100%]">
+            <!-- TODO location1 -->
+            <div class="hover:border hover:rounded-lg">
+              <div class="flex flex-col gap-3 p-3 cursor-pointer">
                 <div class="">
-                  <img src="../src/img/cinemas1.jpg" alt="cinemas" class="rounded-l-md  rounded-r-md">
+                  <img
+                    src="../src/img/cinemas1.jpg"
+                    alt="cinemas"
+                    class="rounded-l-md rounded-r-md"
+                  />
                 </div>
-                <h3 class="text-2xl font-medium text-yellow-500">Movies Today 271 Mega Mal</h3>
+                <h3 class="text-2xl font-medium text-yellow-500">
+                  Movies Today 271 Mega Mal
+                </h3>
                 <div class="flex gap-2">
                   <div class="w-4 h-4 object-cover">
-                      <img src="../src/img/location.png" alt="locatoin">
+                    <img src="../src/img/location.png" alt="locatoin" />
                   </div>
                   <p>3rd Floor, Chip Mong Mega Mall</p>
                 </div>
-                </div>
               </div>
-               <!-- TODO location2 -->
-               <div class="hover:border hover:rounded-lg">
-                <div class="flex flex-col gap-3 p-3 cursor-pointer">
+            </div>
+            <!-- TODO location2 -->
+            <div class="hover:border hover:rounded-lg">
+              <div class="flex flex-col gap-3 p-3 cursor-pointer">
                 <div class="">
-                  <img src="../src/img/cinemas2.jpg" alt="cinemas" class="rounded-l-md  rounded-r-md">
+                  <img
+                    src="../src/img/cinemas2.jpg"
+                    alt="cinemas"
+                    class="rounded-l-md rounded-r-md"
+                  />
                 </div>
-                <h3 class="text-2xl font-medium text-yellow-500">Movies Today Sihanoukville</h3>
+                <h3 class="text-2xl font-medium text-yellow-500">
+                  Movies Today Sihanoukville
+                </h3>
                 <div class="flex gap-2">
                   <div class="w-4 h-4 object-cover">
-                      <img src="../src/img/location.png" alt="locatoin">
+                    <img src="../src/img/location.png" alt="locatoin" />
                   </div>
                   <p>PGB-5-021, 4th Floor of Prince</p>
                 </div>
-                </div>
               </div>
-              <!-- TODO location3 -->
-              <div class="hover:border hover:rounded-lg">
-                <div class="flex flex-col gap-3 p-3 cursor-pointer">
+            </div>
+            <!-- TODO location3 -->
+            <div class="hover:border hover:rounded-lg">
+              <div class="flex flex-col gap-3 p-3 cursor-pointer">
                 <div class="">
-                  <img src="../src/img/cinemas3.jpg" alt="cinemas" class="rounded-l-md  rounded-r-md">
+                  <img
+                    src="../src/img/cinemas3.jpg"
+                    alt="cinemas"
+                    class="rounded-l-md rounded-r-md"
+                  />
                 </div>
-                <h3 class="text-2xl font-medium text-yellow-500">Movies Today Midtown Mal</h3>
+                <h3 class="text-2xl font-medium text-yellow-500">
+                  Movies Today Midtown Mal
+                </h3>
                 <div class="flex gap-2">
                   <div class="w-4 h-4 object-cover">
-                      <img src="../src/img/location.png" alt="locatoin">
+                    <img src="../src/img/location.png" alt="locatoin" />
                   </div>
                   <p>31st Floor Midtown Mall</p>
                 </div>
-                </div>
               </div>
-              <!-- TODO location4 -->
-              <div class="hover:border hover:rounded-lg">
-                <div class="flex flex-col gap-3 p-3 cursor-pointer">
+            </div>
+            <!-- TODO location4 -->
+            <div class="hover:border hover:rounded-lg">
+              <div class="flex flex-col gap-3 p-3 cursor-pointer">
                 <div class="">
-                  <img src="../src/img/cinemas4.jpg" alt="cinemas" class="rounded-l-md  rounded-r-md">
+                  <img
+                    src="../src/img/cinemas4.jpg"
+                    alt="cinemas"
+                    class="rounded-l-md rounded-r-md"
+                  />
                 </div>
-                <h3 class="text-2xl font-medium text-yellow-500">Movies Today Midtown Mall</h3>
+                <h3 class="text-2xl font-medium text-yellow-500">
+                  Movies Today Midtown Mall
+                </h3>
                 <div class="flex gap-2">
                   <div class="w-4 h-4 object-cover">
-                      <img src="../src/img/location.png" alt="locatoin">
+                    <img src="../src/img/location.png" alt="locatoin" />
                   </div>
                   <p>1st Floor Midtown Mall</p>
                 </div>
-                </div>
               </div>
-              <!-- TODO location5 -->
-              <div class="hover:border hover:rounded-lg">
-                <div class="flex flex-col gap-3 p-3 cursor-pointer">
+            </div>
+            <!-- TODO location5 -->
+            <div class="hover:border hover:rounded-lg">
+              <div class="flex flex-col gap-3 p-3 cursor-pointer">
                 <div class="">
-                  <img src="../src/img/cinemas5.jpg" alt="cinemas" class="rounded-l-md  rounded-r-md">
+                  <img
+                    src="../src/img/cinemas5.jpg"
+                    alt="cinemas"
+                    class="rounded-l-md rounded-r-md"
+                  />
                 </div>
-                <h3 class="text-2xl font-medium text-yellow-500">Movies Today Olympia</h3>
+                <h3 class="text-2xl font-medium text-yellow-500">
+                  Movies Today Olympia
+                </h3>
                 <div class="flex gap-2">
                   <div class="w-4 h-4 object-cover">
-                      <img src="../src/img/location.png" alt="locatoin">
+                    <img src="../src/img/location.png" alt="locatoin" />
                   </div>
                   <p>6th Floor,The Olympia Mall</p>
                 </div>
-                </div>
               </div>
-              <!-- TODO location6 -->
-              <div class="hover:border hover:rounded-lg">
-                <div class="flex flex-col gap-3 p-3 cursor-pointer">
+            </div>
+            <!-- TODO location6 -->
+            <div class="hover:border hover:rounded-lg">
+              <div class="flex flex-col gap-3 p-3 cursor-pointer">
                 <div class="">
-                  <img src="../src/img/cinemas6.jpg" alt="cinemas" class="rounded-l-md  rounded-r-md">
+                  <img
+                    src="../src/img/cinemas6.jpg"
+                    alt="cinemas"
+                    class="rounded-l-md rounded-r-md"
+                  />
                 </div>
-                <h3 class="text-2xl font-medium text-yellow-500">Movies ToSiem Reap</h3>
+                <h3 class="text-2xl font-medium text-yellow-500">
+                  Movies ToSiem Reap
+                </h3>
                 <div class="flex gap-2">
                   <div class="w-4 h-4 object-cover">
-                      <img src="../src/img/location.png" alt="locatoin">
+                    <img src="../src/img/location.png" alt="locatoin" />
                   </div>
-                  <p class="line-clamp-1">Level 3, The Heritage Walk, Corner of National Road 6 and Oum Chhay Street</p>
-                </div>
+                  <p class="line-clamp-1">
+                    Level 3, The Heritage Walk, Corner of National Road 6 and
+                    Oum Chhay Street
+                  </p>
                 </div>
               </div>
-              <!-- TODO location7 -->
-              <div class="hover:border hover:rounded-lg">
-                <div class="flex flex-col gap-3 p-3 cursor-pointer">
+            </div>
+            <!-- TODO location7 -->
+            <div class="hover:border hover:rounded-lg">
+              <div class="flex flex-col gap-3 p-3 cursor-pointer">
                 <div class="">
-                  <img src="../src/img/cinemas7.jpg" alt="cinemas" class="rounded-l-md  rounded-r-md">
+                  <img
+                    src="../src/img/cinemas7.jpg"
+                    alt="cinemas"
+                    class="rounded-l-md rounded-r-md"
+                  />
                 </div>
-                <h3 class="text-2xl font-medium text-yellow-500">Movies Today SenSok</h3>
+                <h3 class="text-2xl font-medium text-yellow-500">
+                  Movies Today SenSok
+                </h3>
                 <div class="flex gap-2">
                   <div class="w-4 h-4 object-cover">
-                      <img src="../src/img/location.png" alt="locatoin">
+                    <img src="../src/img/location.png" alt="locatoin" />
                   </div>
                   <p>4th Floor, Chip Mong SenSok Mall</p>
                 </div>
-                </div>
               </div>
-              <!-- TODO location8 -->
-              <div class="hover:border hover:rounded-lg">
-                <div class="flex flex-col gap-3 p-3 cursor-pointer">
+            </div>
+            <!-- TODO location8 -->
+            <div class="hover:border hover:rounded-lg">
+              <div class="flex flex-col gap-3 p-3 cursor-pointer">
                 <div class="">
-                  <img src="../src/img/cinemas8.jpg" alt="cinemas" class="rounded-l-md  rounded-r-md">
+                  <img
+                    src="../src/img/cinemas8.jpg"
+                    alt="cinemas"
+                    class="rounded-l-md rounded-r-md"
+                  />
                 </div>
-                <h3 class="text-2xl font-medium text-yellow-500">Movies Today Toul Kork</h3>
+                <h3 class="text-2xl font-medium text-yellow-500">
+                  Movies Today Toul Kork
+                </h3>
                 <div class="flex gap-2">
                   <div class="w-4 h-4 object-cover">
-                      <img src="../src/img/location.png" alt="locatoin">
+                    <img src="../src/img/location.png" alt="locatoin" />
                   </div>
                   <p>TK Avenue Mall, Street 315</p>
                 </div>
-                </div>
               </div>
-              <!-- TODO location9 -->
-              <div class="hover:border hover:rounded-lg">
-                <div class="flex flex-col gap-3 p-3 cursor-pointer">
+            </div>
+            <!-- TODO location9 -->
+            <div class="hover:border hover:rounded-lg">
+              <div class="flex flex-col gap-3 p-3 cursor-pointer">
                 <div class="">
-                  <img src="../src/img/cinemas9.jpg" alt="cinemas" class="rounded-l-md  rounded-r-md">
+                  <img
+                    src="../src/img/cinemas9.jpg"
+                    alt="cinemas"
+                    class="rounded-l-md rounded-r-md"
+                  />
                 </div>
-                <h3 class="text-2xl font-medium text-yellow-500 line-clamp-1">Movies Todayremium Exchange Square</h3>
+                <h3 class="text-2xl font-medium text-yellow-500 line-clamp-1">
+                  Movies Todayremium Exchange Square
+                </h3>
                 <div class="flex gap-2">
                   <div class="w-4 h-4 object-cover">
-                      <img src="../src/img/location.png" alt="locatoin">
+                    <img src="../src/img/location.png" alt="locatoin" />
                   </div>
                   <p>Street 106, Corner of Street 61</p>
                 </div>
-                </div>
               </div>
             </div>
           </div>
-        </section>
-    </main>
-    <footer id ="renderfooter">
-      <section class="text-center mt-7 ">
-        <h5 class="text-2xl font-bold">Follow Our Social Media</h5>
-        <!-- TODO icon -->
-        <div class="mt-7 text-[30px] flex justify-center items-center gap-24">
-          <i class="fa-brands fa-facebook hover:text-red-700"></i>
-          <i class="fa-brands fa-twitter hover:text-red-700"></i>
-          <i class="fa-brands fa-youtube hover:text-red-700"></i>
-          <i class="fa-brands fa-tiktok hover:text-red-700"></i>
         </div>
       </section>
-      <section class="mt-7 bg-yellow-600 w-[100%] py-10">
-         <!-- TODO company -->
-          <div class="flex justify-between w-[85%] mx-auto">
-            <div class="flex flex-col text-[1rem] gap-2">
-                <h2 class="text-2xl font-semibold">Company</h2>
-                <a href="#" class="hover:text-zinc-800">About us</a>
-                <a href="#" class="hover:text-zinc-800">Contact us</a>
-                <a href="#" class="hover:text-zinc-800">Cinemas</a>
-            </div>
-            <div class="flex flex-col text-[1rem] gap-2">
-              <h2 class="text-2xl font-semibold">More</h2>
-              <a href="#" class="hover:text-zinc-800">Promotions</a>
-              <a href="#" class="hover:text-zinc-800">My Ticket</a>
-              <a href="#" class="hover:text-zinc-800">News & Activity</a>
-              <a href="#" class="hover:text-zinc-800">Terms & Conditions</a>
-            </div>
-            <div class="flex flex-col text-[1rem] gap-2">
-              <h2 class="text-2xl font-semibold">Download Our App</h2>
-              <div class="flex gap-7 items-center">
-              <a href="#" class="hover:text-zinc-800 text-[30px]">
-                    <i class="fa-brands fa-apple"></i>
-              </a>
-              <a href="#" class="hover:text-zinc-800 text-[25px]">
-                <i class="fa-brands fa-google-play"></i>
-              </a>
-              </div>
-            </div>
-          </div>
-          <div class="w-[85%] mx-auto mt-10">
-            <h2 class="text-2xl font-semibold">Payment</h2>
-            <div class="flex mt-7 gap-x-4">
-              <div class="h-[100px] w-[100px] object-cover">
-                <img src="../src/img/aba.webp" alt="payment">
-              </div>
-              <div class="h-[100px] w-[100px] object-cover">
-                <img src="../src/img/visa.png" alt="payment">
-              </div>
-              <div class="h-[50px] w-[100px] justify-start -mt-4 object-cover">
-                <img src="../src/img/payment.png" alt="payment">
-              </div>
-              
-            </div>
-            <p class="text-center mt-5">All right reserved ® 2024</p>
-          </div>
-      </section>
+    </main>
+    <footer id="footer">
     </footer>
+    <script type="module" src="../js/index.js"></script>
   </body>
 </html>
